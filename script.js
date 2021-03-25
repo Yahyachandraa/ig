@@ -43,7 +43,7 @@ document.querySelector(".tombol").addEventListener('click', function () {
           }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-              Swal.fire(`aku juga sama kek ${nama}udah penasaran`).then(function () {
+              Swal.fire(`aku juga sama kek ${nama} udah penasaran`).then(function () {
                 Swal.fire({
                   title: 'Seberapa penasaran emangnya?',
                   icon: 'question',
@@ -57,7 +57,7 @@ document.querySelector(".tombol").addEventListener('click', function () {
                   inputValue: 50
                 }).then((e) => {
                   val = e.value
-                  Swal.fire(`Oke satu step lagi ya ${val}%`).then(function () {
+                  Swal.fire(`Oke satu step lagi ya`).then(function () {
                     Swal.fire({
                       title: `Sekarang ${nama} kamu mau ga ikutin kata ${sender}?`,
                       showDenyButton: true,
@@ -82,7 +82,7 @@ document.querySelector(".tombol").addEventListener('click', function () {
                 })
               })
             } else if (result.isDenied) {
-              Swal.fire(`Yakin nih gamau?`, '', 'error').then(function () {
+              Swal.fire(`Yakin nih ga penasaran???`, '', 'error').then(function () {
                 Swal.fire('Yaudah deh bye!')
               })
             }
